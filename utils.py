@@ -6,6 +6,7 @@ import json
 
 def load_keras_model(model_path):
     return tf.keras.models.load_model(model_path, custom_objects={'KerasLayer': hub.KerasLayer}, compile=False)
+
 def process_image(image: str, image_size: int = 224):
     # make sure that image_size is sensible
     if (image_size < 1 or image_size is None):
